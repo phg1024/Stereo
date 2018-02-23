@@ -3,6 +3,8 @@ project( Stereo )
 
 find_package( OpenCV REQUIRED )
 
+include_directories("./third_party/json/include/")
+
 find_package(Boost COMPONENTS filesystem timer program_options REQUIRED)
 include_directories(${Boost_INCLUDE_DIRS})
 link_libraries(${Boost_LIBRARIES} -lboost_filesystem -lboost_system)
